@@ -80,3 +80,17 @@ TC18: Direct URL: Open search result page directly by URL.
 TC19: Back button: Back to previous search or page.
 
 TC20: Responsive: Works on desktop, tablet, and mobile.
+
+### GitHub Actions for CI
+
+This repository uses GitHub Actions to automate running Playwright tests for both UI and API on every code change or pull request. This helps ensure the application behaves correctly and all tests pass before any changes are merged.
+
+How it works: 
+The GitHub Actions workflow is triggered on push or pull_request events for the main branche. The workflow runs Playwright tests in the following order:
+
+The latest code is pulled from the repository.
+The node.js environment is set up with the LTS version.
+Dependencies are installed using npm ci to ensure a clean and reproducible environment.
+The Chromium browser required for running Playwright tests is installed along with any necessary dependencies.
+The UI tests are executed using the npm run test:ui script.
+After the tests are completed, the test reports are uploaded as an artifact for easy inspection.
