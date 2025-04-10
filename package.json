@@ -1,0 +1,28 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elriyanova/playwright-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elriyanova/playwright-tests/issues"
+  },
+  "homepage": "https://github.com/elriyanova/playwright-tests#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
