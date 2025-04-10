@@ -7,9 +7,9 @@ export async function login(page: Page, user = USER): Promise<void> {
   await page.fill('input#pass', user.password);
 
   const acceptBtn = page.locator('#accept-btn');
-//   if (await acceptBtn.isVisible()) {
+  if (await acceptBtn.isVisible()) {
     await acceptBtn.click();
-//   }
+  }
 
   await page.click('[class="login-container"] button[type="submit"]');
   await expect(page).toHaveURL(/.*customer\/account/);
